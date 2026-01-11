@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="_23010310007_DilaraAltun_FinalOdev.views.kurlarpage"
+             Title="Döviz Kurları">
+    <Grid RowDefinitions="Auto, *">
+        <ActivityIndicator x:Name="LoadingIndicator" 
+                           IsRunning="False" 
+                           IsVisible="False"
+                           Color="Purple"
+                           HorizontalOptions="Center" 
+                           Grid.Row="0" />
+
+        <ScrollView Grid.Row="1">
+            <VerticalStackLayout Padding="10">
+                <Label Text="Döviz ve Altın Fiyatları" FontSize="20" FontAttributes="Bold" Margin="0,10"/>
+
+                <CollectionView x:Name="KurlarList">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Frame Margin="0,5" Padding="10">
+                                <Grid ColumnDefinitions="*, *, *, *">
+                                    <Label Text="{Binding Isim}" FontAttributes="Bold" Grid.Column="0"/>
+                                    <Label Text="{Binding Alis}" Grid.Column="1" HorizontalOptions="Center"/>
+                                    <Label Text="{Binding Satis}" Grid.Column="2" HorizontalOptions="Center"/>
+                                    <Label Text="{Binding Fark}" TextColor="Green" Grid.Column="3" HorizontalOptions="End"/>
+                                </Grid>
+                            </Frame>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>

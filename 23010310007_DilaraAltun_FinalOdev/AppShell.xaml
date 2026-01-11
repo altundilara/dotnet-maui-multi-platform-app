@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="_23010310007_DilaraAltun_FinalOdev.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:views="clr-namespace:_23010310007_DilaraAltun_FinalOdev.views"
+    Title="Görsel Programlama Ödev-3"
+    FlyoutBehavior="Flyout">
+    
+    <FlyoutItem Title="Giriş" Icon="home.png">
+        <ShellContent ContentTemplate="{DataTemplate views:girispage}" />
+    </FlyoutItem>
+    
+    <FlyoutItem Title="Kurlar" Icon="currency.png">
+        <ShellContent ContentTemplate="{DataTemplate views:kurlarpage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Haberler" Icon="news.png">
+        <ShellContent ContentTemplate="{DataTemplate views:haberlerpage}" />
+         </FlyoutItem>
+
+    <FlyoutItem Title="Hava Durumu" Icon="weather.png">
+            <ShellContent ContentTemplate="{DataTemplate views:havadurumupage}" />
+        </FlyoutItem>
+
+        <FlyoutItem Title="Yapılacaklar" Icon="todo.png">
+            <ShellContent ContentTemplate="{DataTemplate views:yapilacaklarpage}" />
+        </FlyoutItem>
+
+        <FlyoutItem Title="Ayarlar" Icon="settings.png">
+            <ShellContent ContentTemplate="{DataTemplate views:ayarlarpage}" />
+        </FlyoutItem>
+
+    <FlyoutItem Title="Login" Icon="settings.png">
+        <ShellContent ContentTemplate="{DataTemplate views:loginpage}" />
+    </FlyoutItem>
+
+</Shell>

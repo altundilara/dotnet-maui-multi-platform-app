@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="_23010310007_DilaraAltun_FinalOdev.views.girispage"
+             Title="Giriş">
+    <ScrollView>
+        <VerticalStackLayout Padding="30" Spacing="20" HorizontalOptions="Center">
+
+            <Label Text="ÖDEV-3" 
+                   FontSize="32" 
+                   FontAttributes="Bold" 
+                   HorizontalOptions="Center" 
+                   TextColor="Purple" />
+
+            <Frame CornerRadius="100" 
+                   HeightRequest="200" 
+                   WidthRequest="200" 
+                   IsClippedToBounds="True" 
+                   Padding="0" 
+                   HorizontalOptions="Center">
+                <Image Source="ben.jpeg" 
+                       Aspect="AspectFill" />
+            </Frame>
+
+            <Label Text="DİLARA ALTUN" 
+                   FontSize="24" 
+                   FontAttributes="Bold" 
+                   HorizontalOptions="Center" />
+            <Label Text="23010310007" 
+                   FontSize="20" 
+                   HorizontalOptions="Center" />
+            <Label Text="Bartın Üniversitesi Bilgisayar Mühendisliği Bölümü" 
+                   FontSize="16" 
+                   HorizontalOptions="Center" 
+                   HorizontalTextAlignment="Center" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage> 

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="_23010310007_DilaraAltun_FinalOdev.views.havadurumupage"
+             Title="Hava Durumu">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+            <HorizontalStackLayout Spacing="10">
+                <Entry x:Name="SehirEntry" Placeholder="Şehir girin (Örn: Bartın)" WidthRequest="250" />
+                <Button Text="Ekle" Clicked="OnSehirEkleClicked" BackgroundColor="#5C6BC0" TextColor="White" CornerRadius="8" />
+            </HorizontalStackLayout>
+
+            <Frame BackgroundColor="#F0F0F0" Padding="15" CornerRadius="10">
+                <VerticalStackLayout Spacing="10" HorizontalOptions="Center">
+                    <Label x:Name="ResultCityLabel" FontSize="22" FontAttributes="Bold" Text="Şehir Seçin" HorizontalOptions="Center" />
+
+                    <Label Text="Anlık Durum" FontAttributes="Italic" HorizontalOptions="Center" />
+                    <Image x:Name="TodayWeatherImage" HeightRequest="180" BackgroundColor="White" />
+
+                    <Label Text="5 Günlük Tahmin" FontAttributes="Italic" HorizontalOptions="Center" Margin="0,10,0,0" />
+                    <Image x:Name="FiveDayWeatherImage" HeightRequest="180" BackgroundColor="White" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <Label Text="Kayıtlı Şehirler (Üstüne tıkla)" FontAttributes="Bold" Margin="0,10,0,0" />
+            <CollectionView x:Name="SehirlerList" SelectionMode="Single" SelectionChanged="OnSehirSecildi">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame Margin="0,5" Padding="10">
+                            <Label Text="{Binding SehirAdi}" FontSize="16" VerticalOptions="Center" />
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

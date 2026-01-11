@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="_23010310007_DilaraAltun_FinalOdev.views.gorevdetaypage"
+             Title="gorevdetaypage">
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+
+            <Label Text="Başlık" FontAttributes="Bold" />
+            <Entry x:Name="BaslikEntry" Placeholder="Görev başlığı giriniz" />
+
+            <Label Text="Detay" FontAttributes="Bold" />
+            <Editor x:Name="DetayEditor" Placeholder="Görev detayı giriniz" AutoSize="TextChanges" HeightRequest="100" />
+
+            <Label Text="Tarih" FontAttributes="Bold" />
+            <DatePicker x:Name="TarihPicker" />
+
+            <Label Text="Saat" FontAttributes="Bold" />
+            <TimePicker x:Name="SaatPicker" />
+
+            <HorizontalStackLayout Spacing="10">
+                <Label Text="Yapıldı mı?" />
+                <Switch x:Name="YapildiSwitch" />
+            </HorizontalStackLayout>
+
+            <Button Text="Kaydet" BackgroundColor="#2196F3" TextColor="White" Clicked="OnKaydetClicked" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

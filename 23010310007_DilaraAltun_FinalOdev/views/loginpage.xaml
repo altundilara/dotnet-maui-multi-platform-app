@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="_23010310007_DilaraAltun_FinalOdev.views.loginpage"
+             Title="Oturum Aç">
+    <VerticalStackLayout Spacing="15" Padding="30" VerticalOptions="Center">
+
+        <Label Text="Hoş Geldiniz" FontSize="24" HorizontalOptions="Center" FontAttributes="Bold"/>
+
+        <Entry x:Name="EmailEntry" Placeholder="Email Adresiniz" Keyboard="Email" />
+        <Entry x:Name="PasswordEntry" Placeholder="Şifreniz" IsPassword="True" />
+
+        <Button Text="Oturum Aç" 
+            Clicked="OnLoginClicked" 
+            BackgroundColor="Purple" 
+            TextColor="White"/>
+
+        <Button Text="Henüz hesabınız yok mu? Kaydolun" 
+            Clicked="OnRegisterClicked" 
+            BackgroundColor="Transparent" 
+            TextColor="#512BD4" 
+            FontSize="14" />
+
+        <ActivityIndicator x:Name="LoadingIndicator" IsRunning="False" HorizontalOptions="Center" />
+
+    </VerticalStackLayout>
+</ContentPage>

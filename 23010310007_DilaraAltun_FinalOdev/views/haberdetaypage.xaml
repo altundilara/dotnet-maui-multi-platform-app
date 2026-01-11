@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="_23010310007_DilaraAltun_FinalOdev.views.haberdetaypage"
+             Title="Haber Detayları">
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+            <Label x:Name="BaslikLabel" 
+                   FontSize="24" 
+                   FontAttributes="Bold" 
+                   TextColor="Black" />
+
+            <Image x:Name="HaberResim" 
+                   HeightRequest="300" 
+                   Aspect="AspectFit" 
+                    />
+
+            <Label x:Name="DetayLabel" 
+                   FontSize="16" 
+                   TextColor="#333333" />
+
+            <Label x:Name="YazarLabel" 
+                   FontSize="12" 
+                   TextColor="Gray" 
+                   HorizontalOptions="End" />
+            <Button
+    Text="Haberi Paylaş"
+    Clicked="OnPaylasClicked" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
